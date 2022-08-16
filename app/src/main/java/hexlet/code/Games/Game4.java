@@ -6,9 +6,11 @@ import java.util.Scanner;
 public class Game4 {
     public static void main() {
         Cli.main();
-        for (var j = 1; j <= 3; j++) {
-            int firstNum = (int) (Math.random() * 100);
-            int secondNum = (int) (Math.random() * 100);
+        final int requiredNumberOfRounds = 3;
+        final int maxValue = 100;
+        for (var j = 1; j <= requiredNumberOfRounds; j++) {
+            int firstNum = (int) (Math.random() * maxValue);
+            int secondNum = (int) (Math.random() * maxValue);
             int maxNum = Math.max(firstNum, secondNum);
             int minNum = Math.min(firstNum, secondNum);
             while (maxNum % minNum != 0) {
@@ -31,7 +33,7 @@ public class Game4 {
                 System.out.println("Let's try again, " + Cli.getUserName() + "!");
                 break;
             }
-            if (j == 3) {
+            if (j == requiredNumberOfRounds) {
                 System.out.println("Congratulations, " + Cli.getUserName() + "!");
             }
         }

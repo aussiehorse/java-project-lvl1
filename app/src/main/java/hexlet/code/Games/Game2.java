@@ -8,9 +8,10 @@ public class Game2 {
         Cli.main();
 
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
-
-        for (var j = 1; j <= 3; j++) {
-            int i = (int) (Math.random() * 100);
+        final int requiredNumberOfRounds = 3;
+        final int maxValue = 100;
+        for (var j = 1; j <= requiredNumberOfRounds; j++) {
+            int i = (int) (Math.random() * maxValue);
             System.out.print("Question: " + i + "\nYour answer: ");
             String parity;
             if (i % 2 == 0) {
@@ -28,7 +29,7 @@ public class Game2 {
                 System.out.println("Let's try again, " + Cli.getUserName() + "!");
                 break;
             }
-            if (j == 3) {
+            if (j == requiredNumberOfRounds) {
                 System.out.println("Congratulations, " + Cli.getUserName() + "!");
             }
         }

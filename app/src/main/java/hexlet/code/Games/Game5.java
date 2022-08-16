@@ -7,12 +7,17 @@ public class Game5 {
     public static void main() {
 
         Cli.main();
+        final int requiredNumberOfRounds = 3;
+        final int maxValue = 100;
 
-        for (var j = 1; j <= 3; j++) {
-            int step = (int) (1 + Math.random() * 10);
-            int arrayLength = (int) (5 + Math.random() * 6);
+        final int minArrayLength = 5;
+        final int maxArrayLength = 10;
+        final int maxStepLength = 10;
+        for (var j = 1; j <= requiredNumberOfRounds; j++) {
+            int step = (int) (1 + Math.random() * maxStepLength);
+            int arrayLength = (int) (minArrayLength + Math.random() * (1 + maxArrayLength - minArrayLength));
             int[] progression = new int[arrayLength];
-            progression[0] = (int) (Math.random() * 100);
+            progression[0] = (int) (Math.random() * maxValue);
             for (var i = 0; i < (arrayLength - 1); i++) {
                 progression[i + 1] = progression[i] + step;
             }
@@ -39,7 +44,7 @@ public class Game5 {
                 System.out.println("Let's try again, " + Cli.getUserName() + "!");
                 break;
             }
-            if (j == 3) {
+            if (j == requiredNumberOfRounds) {
                 System.out.println("Congratulations, " + Cli.getUserName() + "!");
             }
 

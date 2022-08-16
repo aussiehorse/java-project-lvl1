@@ -9,7 +9,7 @@ public class Cli {
         String name = userInput.nextLine();
         System.out.println("Hello, " + name + "!");
         userName = name;
-        }
+    }
 //    public Cli(String userName) { Cli.userName = userName; }
     public static String getUserName() {
         return userName;

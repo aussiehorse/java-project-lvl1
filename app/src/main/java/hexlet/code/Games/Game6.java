@@ -6,27 +6,26 @@ import java.util.Scanner;
 
 public class Game6 {
     public static void main() {
-
         Cli.main();
+        final int requiredNumberOfRounds = 3;
+        final int maxValue = 100;
+        final int firstPrimeNumbersQuantity = 3;
         System.out.println("Answer 'yes' if given number is prime otherwise answer 'no'.");
 
-        for (var j = 1; j <= 3; j++) {
-            int number = (int) (Math.random() * 100);
+        for (var j = 1; j <= requiredNumberOfRounds; j++) {
+            int number = (int) (Math.random() * maxValue);
             System.out.print("Question: " + number + "\nYour answer: ");
             String primeCheck = "";
             int sqrt = (int) Math.sqrt(number);
-            if (number == 1 || number == 2 || number == 3) {
-                primeCheck = "yes";
-            } else {
-                for (var k = 2; k <= sqrt; k++) {
-                    if (number % k == 0) {
-                        primeCheck = "no";
-                        break;
-                    } else {
-                        primeCheck = "yes";
-                    }
+            for (var k = 2; k <= sqrt; k++) {
+                if (number > firstPrimeNumbersQuantity && number % k == 0) {
+                    primeCheck = "no";
+                    break;
+                } else {
+                    primeCheck = "yes";
                 }
             }
+
             Scanner userInputAnswer = new Scanner(System.in);
             String answer = userInputAnswer.nextLine();
             if (answer.equals(primeCheck)) {
@@ -36,7 +35,7 @@ public class Game6 {
                 System.out.println("Let's try again, " + Cli.getUserName() + "!");
                 break;
             }
-            if (j == 3) {
+            if (j == requiredNumberOfRounds) {
                 System.out.println("Congratulations, " + Cli.getUserName() + "!");
             }
         }

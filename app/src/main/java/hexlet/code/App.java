@@ -8,21 +8,27 @@ import hexlet.code.Games.Game6;
 import java.util.Scanner;
 
 public class App {
-        public static void main(String[] args) {
-            System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n3 - Calc");
-            System.out.print("4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
-            Scanner userInput = new Scanner(System.in);
-            int number = userInput.nextInt();
-            switch (number) {
-                case 1 -> Cli.main();
-                case 2 -> Game2.main();
-                case 3 -> Game3.main();
-                case 4 -> Game4.main();
-                case 5 -> Game5.main();
-                case 6 -> Game6.main();
-                default -> {
-                }
+    public static void main(String[] args) {
+        System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n3 - Calc");
+        System.out.print("4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
+        final int greeting = 1;
+        final int game2 = 2;
+        final int game3 = 3;
+        final int game4 = 4;
+        final int game5 = 5;
+        final int game6 = 6;
+        Scanner userInput = new Scanner(System.in);
+        int number = userInput.nextInt();
+        switch (number) {
+            case greeting -> Cli.main();
+            case game2 -> Game2.main();
+            case game3 -> Game3.main();
+            case game4 -> Game4.main();
+            case game5 -> Game5.main();
+            case game6 -> Game6.main();
+            default -> {
             }
+        }
 
     }
 

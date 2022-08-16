@@ -9,13 +9,15 @@ public class Game3 {
         Cli.main();
 
         String[] operators = {"+", "-", "*"};
-
-        for (var j = 1; j <= 3; j++) {
-            int firstNum = (int) (Math.random() * 100);
-            int secondNum = (int) (Math.random() * 100);
+        int operatorsLength = operators.length;
+        final int requiredNumberOfRounds = 3;
+        final int maxValue = 100;
+        for (var j = 1; j <= requiredNumberOfRounds; j++) {
+            int firstNum = (int) (Math.random() * maxValue);
+            int secondNum = (int) (Math.random() * maxValue);
 
             Random random = new Random();
-            int i = random.nextInt(3);
+            int i = random.nextInt(operatorsLength);
 
             System.out.println("What is the result of the expression?");
             System.out.print("Question: " + firstNum + " " + operators[i] + " " + secondNum + "\nYour answer: ");
@@ -51,9 +53,9 @@ public class Game3 {
                 }
                 break;
             }
-            if (j == 3) {
+            if (j == requiredNumberOfRounds) {
                 System.out.println("Congratulations, " + Cli.getUserName() + "!");
-        }
+            }
 
         }
     }
