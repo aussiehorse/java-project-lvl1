@@ -17,27 +17,23 @@ public class Game6 {
             int sqrt = (int) Math.sqrt(number);
             if (number == 1 || number == 2 || number == 3) {
                 primeCheck = "yes";
-            }
-            else {
+            } else {
                 for (var k = 2; k <= sqrt; k++) {
                     if (number % k == 0) {
                         primeCheck = "no";
                         break;
-                    }
-                    else {
+                    } else {
                         primeCheck = "yes";
                     }
                 }
             }
-            
             Scanner userInputAnswer = new Scanner(System.in);
             String answer = userInputAnswer.nextLine();
-            
             if (answer.equals(primeCheck)) {
                 System.out.println("Correct!");
-            }
-            else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + primeCheck + "'.\nLet's try again, " + Cli.getUserName() + "!");
+            } else {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + primeCheck + "'.");
+                System.out.println("Let's try again, " + Cli.getUserName() + "!");
                 break;
             }
             if (j == 3) {

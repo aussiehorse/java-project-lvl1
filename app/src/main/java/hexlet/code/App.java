@@ -9,7 +9,8 @@ import java.util.Scanner;
 
 public class App {
         public static void main(String[] args) {
-            System.out.print("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
+            System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n3 - Calc");
+            System.out.print("4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
             Scanner userInput = new Scanner(System.in);
             int number = userInput.nextInt();
             switch (number) {

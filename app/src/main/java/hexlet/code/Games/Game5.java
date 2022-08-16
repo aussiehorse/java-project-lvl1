@@ -26,16 +26,17 @@ public class Game5 {
             printProgression = printProgression.replace(",", "");
             printProgression = printProgression.replace("-1", "..");
 
-            System.out.print("What number is missing in the progression?\nQuestion: " + printProgression + "\nYour answer: ");
+            System.out.println("What number is missing in the progression?");
+            System.out.print("Question: " + printProgression + "\nYour answer: ");
 
             Scanner userInputAnswer = new Scanner(System.in);
             int answer = userInputAnswer.nextInt();
 
             if (answer == temp) {
                 System.out.println("Correct!");
-            }
-            else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + temp + "'.\nLet's try again, " + Cli.getUserName() + "!");
+            } else {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + temp + "'.");
+                System.out.println("Let's try again, " + Cli.getUserName() + "!");
                 break;
             }
             if (j == 3) {

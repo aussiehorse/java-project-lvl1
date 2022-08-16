@@ -17,7 +17,8 @@ public class Game3 {
             Random random = new Random();
             int i = random.nextInt(3);
 
-            System.out.print("What is the result of the expression?\nQuestion: " + firstNum + " " + operators[i] + " " + secondNum + "\nYour answer: ");
+            System.out.println("What is the result of the expression?");
+            System.out.print("Question: " + firstNum + " " + operators[i] + " " + secondNum + "\nYour answer: ");
 
             Scanner userInputAnswer = new Scanner(System.in);
             int answer = userInputAnswer.nextInt();
@@ -27,18 +28,26 @@ public class Game3 {
 
             if (operators[i].equals("+") && answer == sum) {
                 System.out.println("Correct!");
-            }
-            else if (operators[i].equals("-") && answer == sub) {
+            } else if (operators[i].equals("-") && answer == sub) {
                 System.out.println("Correct!");
-            }
-            else if (operators[i].equals("*") && answer == mul) {
+            } else if (operators[i].equals("*") && answer == mul) {
                 System.out.println("Correct!");
-            }
-            else {
+            } else {
                 switch (operators[i]) {
-                    case "+" -> System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + sum + "'.\nLet's try again, " + Cli.getUserName() + "!");
-                    case "-" -> System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + sub + "'.\nLet's try again, " + Cli.getUserName() + "!");
-                    case "*" -> System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + mul + "'.\nLet's try again, " + Cli.getUserName() + "!");
+                    case "+" -> {
+                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + sum + "'.");
+                        System.out.println("Let's try again, " + Cli.getUserName() + "!");
+                    }
+                    case "-" -> {
+                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + sub + "'.");
+                        System.out.println("Let's try again, " + Cli.getUserName() + "!");
+                    }
+                    case "*" -> {
+                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + mul + "'.");
+                        System.out.println("Let's try again, " + Cli.getUserName() + "!");
+                    }
+                    default -> {
+                    }
                 }
                 break;
             }

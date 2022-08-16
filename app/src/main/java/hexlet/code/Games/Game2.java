@@ -15,8 +15,7 @@ public class Game2 {
             String parity;
             if (i % 2 == 0) {
                 parity = "yes";
-            }
-            else {
+            } else {
                 parity = "no";
             }
 
@@ -24,9 +23,9 @@ public class Game2 {
             String answer = userInputAnswer.nextLine();
             if (answer.equals(parity)) {
                 System.out.println("Correct!");
-            }
-            else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + parity + "'.\nLet's try again, " + Cli.getUserName() + "!");
+            } else {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + parity + "'.");
+                System.out.println("Let's try again, " + Cli.getUserName() + "!");
                 break;
             }
             if (j == 3) {
