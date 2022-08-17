@@ -20,7 +20,7 @@ public class Game4 {
             }
             int gcd = minNum;
 
-            System.out.println("Find the greatest common divisor of given numbers." +
+            System.out.print("Find the greatest common divisor of given numbers." +
                     "\nQuestion: " + firstNum + " " + secondNum + "\nYour answer: ");
 
             Scanner userInputAnswer = new Scanner(System.in);
