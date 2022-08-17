@@ -31,8 +31,8 @@ public class Game6 {
             if (answer.equals(primeCheck)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + primeCheck + "'.");
-                System.out.println("Let's try again, " + Cli.getUserName() + "!");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + primeCheck + "'." +
+                        "\nLet's try again, " + Cli.getUserName() + "!");
                 break;
             }
             if (j == requiredNumberOfRounds) {

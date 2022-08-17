@@ -20,8 +20,8 @@ public class Game4 {
             }
             int gcd = minNum;
 
-            System.out.println("Find the greatest common divisor of given numbers.");
-            System.out.print("Question: " + firstNum + " " + secondNum + "\nYour answer: ");
+            System.out.println("Find the greatest common divisor of given numbers." +
+                    "\nQuestion: " + firstNum + " " + secondNum + "\nYour answer: ");
 
             Scanner userInputAnswer = new Scanner(System.in);
             int answer = userInputAnswer.nextInt();
@@ -29,8 +29,8 @@ public class Game4 {
             if (answer == gcd) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + gcd + "'.");
-                System.out.println("Let's try again, " + Cli.getUserName() + "!");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + gcd + "'." +
+                        "\nLet's try again, " + Cli.getUserName() + "!");
                 break;
             }
             if (j == requiredNumberOfRounds) {
