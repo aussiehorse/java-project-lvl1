@@ -9,18 +9,18 @@ public class Game6 {
         Cli.main();
         final int requiredNumberOfRounds = 3;
         final int maxValue = 100;
-        final int firstPrimeNumbersQuantity = 3;
         System.out.println("Answer 'yes' if given number is prime otherwise answer 'no'.");
 
         for (var j = 1; j <= requiredNumberOfRounds; j++) {
             int number = (int) (Math.random() * maxValue);
             System.out.print("Question: " + number + "\nYour answer: ");
             String primeCheck = "";
-            int sqrt = (int) Math.sqrt(number);
-            if (number <= firstPrimeNumbersQuantity) {
+            if (number == 1) {
+                primeCheck = "no";
+            } else if (number == 2) {
                 primeCheck = "yes";
             } else {
-                for (var k = 2; k <= sqrt; k++) {
+                for (var k = 2; k < number; k++) {
                     if (number % k == 0) {
                         primeCheck = "no";
                         break;
@@ -29,6 +29,20 @@ public class Game6 {
                     }
                 }
             }
+//            switch (number) {
+//                case 1 -> primeCheck = "no";
+//                case 2 -> primeCheck = "yes";
+//                default -> {
+//                    for (var k = 2; k < number; k++) {
+//                        if (number % k == 0) {
+//                            primeCheck = "no";
+//                            break;
+//                        } else {
+//                            primeCheck = "yes";
+//                        }
+//                    }
+//                }
+//            }
 
             Scanner userInputAnswer = new Scanner(System.in);
             String answer = userInputAnswer.nextLine();
