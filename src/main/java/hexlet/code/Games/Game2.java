@@ -4,7 +4,7 @@ import hexlet.code.Cli;
 import java.util.Scanner;
 
 public class Game2 {
-    public static void main() {
+    public static void even() {
         Cli.main();
 
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");

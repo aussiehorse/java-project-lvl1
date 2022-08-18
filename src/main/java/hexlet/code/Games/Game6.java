@@ -5,7 +5,7 @@ import hexlet.code.Cli;
 import java.util.Scanner;
 
 public class Game6 {
-    public static void main() {
+    public static void prime() {
         Cli.main();
         final int requiredNumberOfRounds = 3;
         final int maxValue = 100;
@@ -29,21 +29,6 @@ public class Game6 {
                     }
                 }
             }
-//            switch (number) {
-//                case 1 -> primeCheck = "no";
-//                case 2 -> primeCheck = "yes";
-//                default -> {
-//                    for (var k = 2; k < number; k++) {
-//                        if (number % k == 0) {
-//                            primeCheck = "no";
-//                            break;
-//                        } else {
-//                            primeCheck = "yes";
-//                        }
-//                    }
-//                }
-//            }
-
             Scanner userInputAnswer = new Scanner(System.in);
             String answer = userInputAnswer.nextLine();
             if (answer.equals(primeCheck)) {

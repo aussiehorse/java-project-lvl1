@@ -21,11 +21,11 @@ public class App {
         int number = userInput.nextInt();
         switch (number) {
             case greeting -> Cli.main();
-            case game2 -> Game2.main();
-            case game3 -> Game3.main();
-            case game4 -> Game4.main();
-            case game5 -> Game5.main();
-            case game6 -> Game6.main();
+            case game2 -> Game2.even();
+            case game3 -> Game3.calc();
+            case game4 -> Game4.gcd();
+            case game5 -> Game5.progression();
+            case game6 -> Game6.prime();
             default -> {
             }
         }

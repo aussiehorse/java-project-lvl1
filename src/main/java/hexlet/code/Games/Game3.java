@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game3 {
-    public static void main() {
+    public static void calc() {
         Cli.main();
 
         String[] operators = {"+", "-", "*"};

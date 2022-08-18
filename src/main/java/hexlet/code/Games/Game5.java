@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Game5 {
-    public static void main() {
+    public static void progression() {
 
         Cli.main();
         final int requiredNumberOfRounds = 3;

@@ -4,7 +4,7 @@ import hexlet.code.Cli;
 import java.util.Scanner;
 
 public class Game4 {
-    public static void main() {
+    public static void gcd() {
         Cli.main();
         final int requiredNumberOfRounds = 3;
         final int maxValue = 100;
