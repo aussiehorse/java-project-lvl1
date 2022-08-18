@@ -25,8 +25,8 @@ public class Game2 {
             if (answer.equals(parity)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + parity + "'." +
-                        "\nLet's try again, " + Cli.getUserName() + "!");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + parity + "'."
+                        + "\nLet's try again, " + Cli.getUserName() + "!");
                 break;
             }
             if (j == requiredNumberOfRounds) {

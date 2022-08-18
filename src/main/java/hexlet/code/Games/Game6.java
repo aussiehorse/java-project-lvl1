@@ -17,12 +17,16 @@ public class Game6 {
             System.out.print("Question: " + number + "\nYour answer: ");
             String primeCheck = "";
             int sqrt = (int) Math.sqrt(number);
-            for (var k = 2; k <= sqrt; k++) {
-                if (number > firstPrimeNumbersQuantity && number % k == 0) {
-                    primeCheck = "no";
-                    break;
-                } else {
-                    primeCheck = "yes";
+            if (number <= firstPrimeNumbersQuantity) {
+                primeCheck = "yes";
+            } else {
+                for (var k = 2; k <= sqrt; k++) {
+                    if (number % k == 0) {
+                        primeCheck = "no";
+                        break;
+                    } else {
+                        primeCheck = "yes";
+                    }
                 }
             }
 
@@ -31,8 +35,8 @@ public class Game6 {
             if (answer.equals(primeCheck)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + primeCheck + "'." +
-                        "\nLet's try again, " + Cli.getUserName() + "!");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + primeCheck + "'."
+                        + "\nLet's try again, " + Cli.getUserName() + "!");
                 break;
             }
             if (j == requiredNumberOfRounds) {

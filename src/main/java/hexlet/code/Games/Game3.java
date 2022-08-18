@@ -19,8 +19,8 @@ public class Game3 {
             Random random = new Random();
             int i = random.nextInt(operatorsLength);
 
-            System.out.println("What is the result of the expression?" +
-            "\nQuestion: " + firstNum + " " + operators[i] + " " + secondNum + "\nYour answer: ");
+            System.out.println("What is the result of the expression?"
+                    + "\nQuestion: " + firstNum + " " + operators[i] + " " + secondNum + "\nYour answer: ");
 
             Scanner userInputAnswer = new Scanner(System.in);
             int answer = userInputAnswer.nextInt();
@@ -37,16 +37,16 @@ public class Game3 {
             } else {
                 switch (operators[i]) {
                     case "+" -> {
-                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + sum + "'." +
-                                "\nLet's try again, " + Cli.getUserName() + "!");
+                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + sum + "'."
+                                + "\nLet's try again, " + Cli.getUserName() + "!");
                     }
                     case "-" -> {
-                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + sub + "'." +
-                                "\nLet's try again, " + Cli.getUserName() + "!");
+                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + sub + "'."
+                                + "\nLet's try again, " + Cli.getUserName() + "!");
                     }
                     case "*" -> {
-                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + mul + "'." +
-                                "\nLet's try again, " + Cli.getUserName() + "!");
+                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + mul + "'."
+                                + "\nLet's try again, " + Cli.getUserName() + "!");
                     }
                     default -> {
                     }

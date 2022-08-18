@@ -31,8 +31,8 @@ public class Game5 {
             printProgression = printProgression.replace(",", "");
             printProgression = printProgression.replace("-1", "..");
 
-            System.out.print("What number is missing in the progression?" +
-                    "\nQuestion: " + printProgression + "\nYour answer: ");
+            System.out.print("What number is missing in the progression?"
+                    + "\nQuestion: " + printProgression + "\nYour answer: ");
 
             Scanner userInputAnswer = new Scanner(System.in);
             int answer = userInputAnswer.nextInt();
@@ -40,8 +40,8 @@ public class Game5 {
             if (answer == temp) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + temp + "'." +
-                        "\nLet's try again, " + Cli.getUserName() + "!");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + temp + "'."
+                        + "\nLet's try again, " + Cli.getUserName() + "!");
                 break;
             }
             if (j == requiredNumberOfRounds) {
