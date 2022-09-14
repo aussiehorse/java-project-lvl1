@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.37">
+<file name="/home/trek/Java/app/src/main/java/hexlet/code/App.java">
+</file>
+<file name="/home/trek/Java/app/src/main/java/hexlet/code/Engine.java">
+</file>
+<file name="/home/trek/Java/app/src/main/java/hexlet/code/Games/Calc.java">
+</file>
+<file name="/home/trek/Java/app/src/main/java/hexlet/code/Games/Even.java">
+</file>
+<file name="/home/trek/Java/app/src/main/java/hexlet/code/Games/Gcd.java">
+</file>
+<file name="/home/trek/Java/app/src/main/java/hexlet/code/Games/Prime.java">
+</file>
+<file name="/home/trek/Java/app/src/main/java/hexlet/code/Games/Progression.java">
+</file>
+</checkstyle>

@@ -1,16 +1,14 @@
 package hexlet.code.Games;
-import hexlet.code.Cli;
+
+import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class Game4 {
-    public static void gcd() {
-        Cli.main();
-        final int requiredNumberOfRounds = 3;
-        final int maxValue = 100;
-        for (var j = 1; j <= requiredNumberOfRounds; j++) {
-            int firstNum = (int) (Math.random() * maxValue);
-            int secondNum = (int) (Math.random() * maxValue);
+public class Gcd {
+    public static void start(String userName) {
+        for (var j = 1; j <= Engine.REQNUMOFROUNDS; j++) {
+            int firstNum = (int) (Math.random() * Engine.MAXVALUE);
+            int secondNum = (int) (Math.random() * Engine.MAXVALUE);
             int maxNum = Math.max(firstNum, secondNum);
             int minNum = Math.min(firstNum, secondNum);
             while (maxNum % minNum != 0) {
@@ -30,11 +28,11 @@ public class Game4 {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + gcd + "'."
-                        + "\nLet's try again, " + Cli.getUserName() + "!");
+                        + "\nLet's try again, " + userName + "!");
                 break;
             }
-            if (j == requiredNumberOfRounds) {
-                System.out.println("Congratulations, " + Cli.getUserName() + "!");
+            if (j == Engine.REQNUMOFROUNDS) {
+                System.out.println("Congratulations, " + userName + "!");
             }
         }
     }

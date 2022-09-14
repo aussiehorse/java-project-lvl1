@@ -1,18 +1,15 @@
 package hexlet.code.Games;
 
-import hexlet.code.Cli;
+import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class Game6 {
-    public static void prime() {
-        Cli.main();
-        final int requiredNumberOfRounds = 3;
-        final int maxValue = 100;
+public class Prime {
+    public static void start(String userName) {
         System.out.println("Answer 'yes' if given number is prime otherwise answer 'no'.");
 
-        for (var j = 1; j <= requiredNumberOfRounds; j++) {
-            int number = (int) (Math.random() * maxValue);
+        for (var j = 1; j <= Engine.REQNUMOFROUNDS; j++) {
+            int number = (int) (Math.random() * Engine.MAXVALUE);
             System.out.print("Question: " + number + "\nYour answer: ");
             String primeCheck = "";
             if (number == 1) {
@@ -35,11 +32,11 @@ public class Game6 {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + primeCheck + "'."
-                        + "\nLet's try again, " + Cli.getUserName() + "!");
+                        + "\nLet's try again, " + userName + "!");
                 break;
             }
-            if (j == requiredNumberOfRounds) {
-                System.out.println("Congratulations, " + Cli.getUserName() + "!");
+            if (j == Engine.REQNUMOFROUNDS) {
+                System.out.println("Congratulations, " + userName + "!");
             }
         }
     }
