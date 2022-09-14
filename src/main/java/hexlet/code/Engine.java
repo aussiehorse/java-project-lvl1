@@ -9,7 +9,7 @@ public class Engine {
     public static final int MAXVALUE = 100;
 
     public static String readUserName() {
-        System.out.print("May I have your name? ");
+        System.out.print("Welcome to the Brain Games! \nMay I have your name? ");
         Scanner userInput = new Scanner(System.in);
         String userName = userInput.nextLine();
         System.out.println("Hello, " + userName + "!");
