@@ -1,4 +1,4 @@
-package hexlet.code.Games;
+package hexlet.code.games;
 
 import hexlet.code.Engine;
 
@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class Gcd {
     public static void start(String userName) {
-        for (var j = 1; j <= Engine.REQNUMOFROUNDS; j++) {
-            int firstNum = (int) (Math.random() * Engine.MAXVALUE);
-            int secondNum = (int) (Math.random() * Engine.MAXVALUE);
+        for (var j = 1; j <= Engine.REQ_NUM_OF_ROUNDS; j++) {
+            int firstNum = (int) (Math.random() * Engine.MAX_VALUE);
+            int secondNum = (int) (Math.random() * Engine.MAX_VALUE);
             int maxNum = Math.max(firstNum, secondNum);
             int minNum = Math.min(firstNum, secondNum);
             while (maxNum % minNum != 0) {
@@ -18,8 +18,9 @@ public class Gcd {
             }
             int gcd = minNum;
 
-            System.out.print("Find the greatest common divisor of given numbers."
-                    + "\nQuestion: " + firstNum + " " + secondNum + "\nYour answer: ");
+            System.out.println("Find the greatest common divisor of given numbers."
+                    + "\nQuestion: " + firstNum + " " + secondNum);
+            System.out.print("Your answer: ");
 
             Scanner userInputAnswer = new Scanner(System.in);
             int answer = userInputAnswer.nextInt();
@@ -31,7 +32,7 @@ public class Gcd {
                         + "\nLet's try again, " + userName + "!");
                 break;
             }
-            if (j == Engine.REQNUMOFROUNDS) {
+            if (j == Engine.REQ_NUM_OF_ROUNDS) {
                 System.out.println("Congratulations, " + userName + "!");
             }
         }

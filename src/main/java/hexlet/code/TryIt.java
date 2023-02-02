@@ -2,10 +2,9 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine {
-//  required number of rounds for each game
+public class TryIt {
     public static final int REQ_NUM_OF_ROUNDS = 3;
-//  maximum numerical value used in game questions
+    //  maximum numerical value used in game questions
     public static final int MAX_VALUE = 100;
     public static final String[] operators = {"+", "-", "*"};
     public static final int MIN_ARRAY_LENGTH = 5;
@@ -21,4 +20,3 @@ public class Engine {
     }
 
 }
-
